@@ -1,0 +1,13 @@
+*{
+    font-family: "Playfair Display", serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.hero_section{
+    background-image: url("./img/hero_bg2.jpg") ;
+    background-size: cover;
+    background-position: center;
+    
+}
