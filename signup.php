@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
+
 
 
 <body>
@@ -67,54 +69,37 @@
               <h1 class="text-2xl font-bold text-[#14452B] ">
                   Sign UP
               </h1>
-              <form class="space-y-4 md:space-y-6" action="#">
-                <div>
-                    
 
-                <div class="pb-2">
-                      <label for="email" class="block mb-2 text-sm text-[#14452B]">User name</label>
-                      <input type="email" name="email" id="email" class="w-[380px] p-3  rounded-xl text-sm " placeholder="losiento wilson" required="">
-                  </div>
-                  <div class="pb-2">
-                      <label for="email" class="block mb-2 text-sm text-[#14452B]">phoneNumber</label>
-                      <input type="email" name="email" id="email" class="w-[380px] p-3  rounded-xl text-sm " placeholder="+212" required="">
-                  </div>
-                  <div class="pb-2">
-                      <label for="email" class="block mb-2 text-sm text-[#14452B]">Adress</label>
-                      <input type="email" name="email" id="email" class="w-[380px] p-3  rounded-xl text-sm " placeholder="City and home adress" required="">
-                  </div>
+              <form class="space-y-4 md:space-y-6" action="test.php" method="POST">
+    <div>
+        <div class="pb-2">
+            <label for="username" class="block mb-2 text-sm text-[#14452B]">User name</label>
+            <input type="text" name="username" id="username" class="w-[380px] p-3 rounded-xl text-sm" placeholder="losiento wilson" required="">
+        </div>
+        <div class="pb-2">
+            <label for="phoneNumber" class="block mb-2 text-sm text-[#14452B]">Phone Number</label>
+            <input type="text" name="phoneNumber" id="phoneNumber" class="w-[380px] p-3 rounded-xl text-sm" placeholder="+212" required="">
+        </div>
+        <div class="pb-2">
+            <label for="address" class="block mb-2 text-sm text-[#14452B]">Address</label>
+            <input type="text" name="address" id="address" class="w-[380px] p-3 rounded-xl text-sm" placeholder="City and home address" required="">
+        </div>
+        <div class="pb-2">
+            <label for="email" class="block mb-2 text-sm text-[#14452B]">Your Email</label>
+            <input type="email" name="email" id="email" class="w-[380px] p-3 rounded-xl text-sm" placeholder="name@company.com" required="">
+        </div>
+        <div class="pb-2">
+            <label for="password" class="block mb-2 text-sm text-[#14452B]">Your Password</label>
+            <input type="password" name="password" id="password" class="w-[380px] p-3 rounded-xl text-sm" placeholder="********" required="">
+        </div>
+    </div>
+        <a href="#" class="text-sm font-medium text-primary-600 hover:underline text-[#14452B]">Forgot password?</a>
+    
+    <button type="submit" class="w-full text-white bg-[#14452B] text-center py-2 hover:bg-[#FAF5EF] border-2 hover:text-[#14452B] hover:border-2 border-[#14452B] dur">Sign in</button>
+   
+</form>
 
-
-
-                  <div class="pb-2">
-                      <label for="email" class="block mb-2 text-sm text-[#14452B]">Your email</label>
-                      <input type="email" name="email" id="email" class="w-[380px] p-3  rounded-xl text-sm " placeholder="name@company.com" required="">
-                  </div>
-                  <div class="pb-2">
-                      <label for="email" class="block mb-2 text-sm text-[#14452B]">Your password</label>
-                      <input type="email" name="email" id="email" class="w-[380px] p-3  rounded-xl text-sm" placeholder="********" required="">
-                  </div>
-
-
-
-                </div>
-                  
-                  <div class="flex items-center justify-between">
-                      <div class="flex items-start">
-                          <div class="flex items-center h-5">
-                            <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
-                          </div>
-                          <div class="ml-3 text-sm">
-                            <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
-                          </div>
-                      </div>
-                      <a href="#" class="text-sm font-medium text-primary-600 hover:underline text-[#14452B]">Forgot password?</a>
-                  </div>
-                  <button type="submit" class="w-full text-white bg-[#14452B] text-center py-2 hover:bg-[#FAF5EF] border-2 hover:text-[#14452B] hover:border-2 border-[#14452B] dur">Sign in</button>
-                  <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                      Don’t have an account yet? <a href="#" class="font-medium text-[#14452B] hover:underline dark:text-primary-500">Sign up</a>
-                  </p>
-              </form>
+             
           </div>
       </div>
  

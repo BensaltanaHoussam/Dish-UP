@@ -1,4 +1,28 @@
+<?php
+require('./db_connection.php'); 
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+
+    $sql = "SELECT * FROM users WHERE email = ? AND password = ?";
+    
+
+
+    if ($email== email) {
+      
+        header("Location: index.php");
+        exit;
+    } else {
+        
+        echo "<script>alert('Invalid email or password');</script>";
+    }
+
+    $stmt->close();
+}
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -67,14 +91,14 @@
               <h1 class="text-2xl font-bold text-[#14452B] ">
                   Login
               </h1>
-              <form class="space-y-4 md:space-y-6" action="#">
+              <form class="space-y-4 md:space-y-6" methode="POST" action="">
                   <div>
                       <label for="email" class="block mb-2 text-sm text-[#14452B]">Your email</label>
                       <input type="email" name="email" id="email" class="w-[380px] p-3  rounded-xl text-sm " placeholder="name@company.com" required="">
                   </div>
                   <div>
-                      <label for="email" class="block mb-2 text-sm text-[#14452B]">Your password</label>
-                      <input type="email" name="email" id="email" class="w-[380px] p-3  rounded-xl text-sm" placeholder="********" required="">
+                      <label for="password" class="block mb-2 text-sm text-[#14452B]">Your password</label>
+                      <input type="password" name="password" id="email" class="w-[380px] p-3  rounded-xl text-sm" placeholder="********" required="">
                   </div>
                   <div class="flex items-center justify-between">
                       <div class="flex items-start">
