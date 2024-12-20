@@ -89,7 +89,7 @@ $result = mysqli_query($conn, $query);
 
             <!-- Clients Section -->
             <div id="client-section">
-                <table class="min-w-full table-auto border-collapse border border-gray-200">
+                <table class="min-w-full table-auto border-collapse border border-gray-200 ">
                     <thead>
                         <tr class="bg-gray-100">
                             <th class="border bg-slate-400  border-gray-300 px-4 py-2">ID</th>
