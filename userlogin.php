@@ -2,8 +2,7 @@
 require('./db_connection.php'); 
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    echo "hhhhhhhhhhhhhhh 3iyan";
-
+ 
     $email = $_GET['email'];
     $password = $_GET['password'];
 
@@ -36,18 +35,19 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     
                 }
                
-              
-                exit;
+            
             } else {
                 
                 echo "<script>alert('Invalid email or password');</script>";
             }
+        } else {
+          
+            header("Location: login.php");
         }
 
-        // Close the statement
         $stmt->close();
     } else {
-        // Error preparing the query
+     
         echo "<script>alert('Error processing request');</script>";
     }
 }

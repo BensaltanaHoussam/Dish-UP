@@ -28,8 +28,7 @@
         <div class="flex items-center space-x-6 rtl:space-x-reverse">
             <a href="#" class="text-sm  text-gray-500 dark:text-black   hover:underline">(+212) 614038394</a>
             <div class="flex gap-4 items-center">
-                 <a href="#" class="text-sm  text-[#14452B] hover:underline">Login</a>
-            <a href="#" class="text-sm bg-[#14452B] rounded-sm border-2 border-[#14452B]    text-white px-4 py-2 hover:bg-white hover:text-[#14452B] transform duration-300">Sign Up</a>
+                 <a href="./login.php" class="text-sm  text-[#14452B] hover:underline">Login</a>
             </div>
            
         </div>
