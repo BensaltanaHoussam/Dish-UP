@@ -58,7 +58,6 @@
 
 
 
-
 <section class="bg-[url('./img/hero_bg2.jpg')] bg-cover bg-center p-8 flex justify-around   ">
 
 

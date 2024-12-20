@@ -1,28 +1,4 @@
-<?php
-require('./db_connection.php'); 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-
-    $sql = "SELECT * FROM users WHERE email = ? AND password = ?";
-    
-
-
-    if ($email== email) {
-      
-        header("Location: index.php");
-        exit;
-    } else {
-        
-        echo "<script>alert('Invalid email or password');</script>";
-    }
-
-    $stmt->close();
-}
-?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -91,14 +67,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <h1 class="text-2xl font-bold text-[#14452B] ">
                   Login
               </h1>
-              <form class="space-y-4 md:space-y-6" methode="POST" action="">
+              <form class="space-y-4 md:space-y-6" methode="GET" action="userlogin.php">
                   <div>
                       <label for="email" class="block mb-2 text-sm text-[#14452B]">Your email</label>
                       <input type="email" name="email" id="email" class="w-[380px] p-3  rounded-xl text-sm " placeholder="name@company.com" required="">
                   </div>
                   <div>
                       <label for="password" class="block mb-2 text-sm text-[#14452B]">Your password</label>
-                      <input type="password" name="password" id="email" class="w-[380px] p-3  rounded-xl text-sm" placeholder="********" required="">
+                      <input type="password" name="password" id="password" class="w-[380px] p-3  rounded-xl text-sm" placeholder="********" required="">
                   </div>
                   <div class="flex items-center justify-between">
                       <div class="flex items-start">
@@ -111,9 +87,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                       </div>
                       <a href="#" class="text-sm font-medium text-primary-600 hover:underline text-[#14452B]">Forgot password?</a>
                   </div>
-                  <button type="submit" class="w-full text-white bg-[#14452B] text-center py-2 hover:bg-[#FAF5EF] border-2 hover:text-[#14452B] hover:border-2 border-[#14452B] dur">Sign in</button>
+                  <button    type="submit" class="w-full text-white bg-[#14452B] text-center py-2 hover:bg-[#FAF5EF] border-2 hover:text-[#14452B] hover:border-2 border-[#14452B] dur">Sign in</button>
                   <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                      Don’t have an account yet? <a href="#" class="font-medium text-[#14452B] hover:underline dark:text-primary-500">Sign up</a>
+                      Don’t have an account yet? <a href="signup.php?" class="font-medium text-[#14452B] hover:underline dark:text-primary-500">Sign up</a>
                   </p>
               </form>
           </div>
