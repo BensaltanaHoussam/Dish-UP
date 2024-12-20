@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-    --main-color: #CDA55E;
+    --main-color: #14452B;
     --color-dark: #B0B0;
     --text-grey: #B0B0B0;
 }
@@ -33,7 +33,7 @@
 
 .side-header {
     box-shadow: 0px 5px 5px -5px rgb(0 0 0 /10%);
-    background-color: #CDA55E;
+    background-color: #14452B;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -46,7 +46,7 @@
 }
 
 .side-content {
-    background-color: #000;
+    background-color: #14452B;
     height: calc(100vh - 60px);
     overflow: auto;
 }
@@ -62,7 +62,7 @@
 }
  
 .side-content::-webkit-scrollbar-thumb {
-  background: #B0B0; 
+  background: #14452B; 
   border-radius: 10px;
 }
 
@@ -114,7 +114,7 @@
 }
 
 .side-menu a.active {
-    background: #CDA55E;
+    background: #14452B;
 }
 
 .side-menu a.active span, .side-menu a.active small {
@@ -212,7 +212,7 @@ header {
 
 .notify-icon span:last-child {
     position: absolute;
-    background-color: #CDA55E;
+    background-color: #14452B;
     height: 16px;
     width: 16px;
     display: flex;
@@ -272,7 +272,7 @@ main {
 
 .card {
     box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
-    background: #333;
+    background: #14452B;
     padding: 1rem;
     border-radius: 3px;
 }
@@ -314,7 +314,7 @@ main {
 }
 
 .indicator.one {
-    background: #CDA55E;
+    background: #14452B;
 }
 
 .indicator.two {
@@ -370,7 +370,7 @@ input, button, select {
 }
 
 .add button {
-    background-color:#CDA55E;
+    background-color:#14452B;
     color: #ffF;
     height: 37px;
     border-radius: 4px;
@@ -418,7 +418,7 @@ table tbody td {
 
 table tbody td:first-child {
     padding-left: 1rem;
-    color: #CDA55E;
+    color: #14452B;
     font-weight: 600;
     font-size: .9rem;
 }
@@ -460,7 +460,7 @@ table tbody tr {
     display: inline-block;
     text-align: center;
     font-weight: 600;
-    color: #CDA55E;
+    color: #14452B;
     background: #FFF;
     padding: .5rem 1rem;
     border-radius: 20px;

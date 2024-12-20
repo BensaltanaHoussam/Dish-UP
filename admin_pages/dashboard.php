@@ -62,7 +62,7 @@
 
                         <div class="user">
                             <div class="bg-img" style="background-image: url(img/1.jpeg)"></div>
-                            <span class="las la-power-off"></span><span>Logout</span>
+                            <a href="index.php"><span class="las la-power-off"></span><span>Home Page</span></a>
                         </div>
                     </div>
                 </div>
