@@ -6,7 +6,7 @@
 }
 
 .hero_section{
-    background-image: url("./img/hero_bg2.jpg") ;
+    background-image: url("../img/hero_bg2.jpg") ;
     background-size: cover;
     background-position: center;
     

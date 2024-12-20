@@ -26,8 +26,17 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $row = $result->fetch_assoc();
 
             if ($password == $row['password']) {
+
+                if($row['id_roles_fk']== 1){
+
+                    header("Location: ./admin_pages/index.php");
+
+                }else{
+                    header("Location: ./user_pages/index.php");
+                    
+                }
                
-                header("Location: index.php");
+              
                 exit;
             } else {
                 

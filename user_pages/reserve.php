@@ -18,16 +18,17 @@
 <body>
 
 
-<nav class="bg-[#FAF5EF] border-black ">
+<nav class="bg-[#FAF5EF] border-black">
     <div class="flex flex-wrap px-12 justify-between items-center mx-auto max-w-screen-xl ">
-        <a href="#" class="flex items-center  space-x-3 rtl:space-x-reverse">
-            <img class=" h-[60px] w-[120px]" src="./img/DishUP.png" class="h-8" alt="Logo" />
+        <a href="index.php" class="flex items-center  space-x-3 rtl:space-x-reverse">
+            <img class=" h-[60px] w-[120px]" src="../img/DishUP.png" class="h-8" alt="Logo" />
         </a>
         <div class="flex items-center space-x-6 rtl:space-x-reverse">
-            <a href="#" class="text-sm  text-gray-500 dark:text-black   hover:underline">(+212) 614038394</a>
             <div class="flex gap-4 items-center">
-                 <a href="#" class="text-sm  text-[#14452B] hover:underline">Login</a>
-            <a href="#" class="text-sm bg-[#14452B] rounded-sm border-2 border-[#14452B]    text-white px-4 py-2 hover:bg-white hover:text-[#14452B] transform duration-300">Sign Up</a>
+            <a href="#" class="text-sm bg-[#14452B] rounded-sm border-2 border-[#14452B]    text-white px-4 py-2 hover:bg-white hover:text-[#14452B] transform duration-300">contact Us</a>
+
+            <a href="#"><img class="w-[40px] rounded-full" src="../img/profile.jpeg" alt="prile"></a>
+
             </div>
            
         </div>
@@ -58,7 +59,7 @@
 
 
 
-<section class="bg-[url('./img/hero_bg2.jpg')] bg-cover bg-center p-8 flex justify-around   ">
+<section class="bg-[url('../img/hero_bg2.jpg')] bg-cover bg-center p-8 flex justify-around   ">
 
 
 
@@ -105,22 +106,9 @@
 
 
                 </div>
-                  
-                  <div class="flex items-center justify-between">
-                      <div class="flex items-start">
-                          <div class="flex items-center h-5">
-                            <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
-                          </div>
-                          <div class="ml-3 text-sm">
-                            <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
-                          </div>
-                      </div>
-                      <a href="#" class="text-sm font-medium text-primary-600 hover:underline text-[#14452B]">Forgot password?</a>
-                  </div>
-                  <button type="submit" class="w-full text-white bg-[#14452B] text-center py-2 hover:bg-[#FAF5EF] border-2 hover:text-[#14452B] hover:border-2 border-[#14452B] dur">Sign in</button>
-                  <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                      Don’t have an account yet? <a href="#" class="font-medium text-[#14452B] hover:underline dark:text-primary-500">Sign up</a>
-                  </p>
+             
+                  <button type="submit" class="w-full text-white bg-[#14452B] text-center py-2 hover:bg-[#FAF5EF] border-2 hover:text-[#14452B] hover:border-2 border-[#14452B] dur">Submit Order</button>
+                
               </form>
           </div>
 
@@ -140,8 +128,8 @@
 <footer class="bg-white ">
     <div class="w-full max-w-screen-xl  p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
-            <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                <img src="./img/DishUP.png" class="w-[150px]" alt="Flowbite Logo" />
+            <a href="index.php" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <img src="../img/DishUP.png" class="w-[150px]" alt="Flowbite Logo" />
             </a>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                 <li>

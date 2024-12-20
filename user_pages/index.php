@@ -21,14 +21,15 @@
 
 <nav class="bg-[#FAF5EF] border-black">
     <div class="flex flex-wrap px-12 justify-between items-center mx-auto max-w-screen-xl ">
-        <a href="#" class="flex items-center  space-x-3 rtl:space-x-reverse">
-            <img class=" h-[60px] w-[120px]" src="./img/DishUP.png" class="h-8" alt="Logo" />
+        <a href="index.php" class="flex items-center  space-x-3 rtl:space-x-reverse">
+            <img class=" h-[60px] w-[120px]" src="../img/DishUP.png" class="h-8" alt="Logo" />
         </a>
         <div class="flex items-center space-x-6 rtl:space-x-reverse">
-            <a href="#" class="text-sm  text-gray-500 dark:text-black   hover:underline">(+212) 614038394</a>
             <div class="flex gap-4 items-center">
-                 <a href="#" class="text-sm  text-[#14452B] hover:underline">Login</a>
-            <a href="#" class="text-sm bg-[#14452B] rounded-sm border-2 border-[#14452B]    text-white px-4 py-2 hover:bg-white hover:text-[#14452B] transform duration-300">Sign Up</a>
+            <a href="#" class="text-sm bg-[#14452B] rounded-sm border-2 border-[#14452B]    text-white px-4 py-2 hover:bg-white hover:text-[#14452B] transform duration-300">contact Us</a>
+
+            <a href="#"><img class="w-[40px] rounded-full" src="../img/profile.jpeg" alt="prile"></a>
+
             </div>
            
         </div>
@@ -58,7 +59,7 @@
 
 
 
-<section class="hero_section h-[500px] ">
+<section class="bg-[url('../img/hero_bg2.jpg')] bg-cover bg-center h-[500px] ">
 
 <div class="flex flex-col justify-center  ">
 <div class="mt-20 pl-20 flex flex-col justify-center">
@@ -66,7 +67,7 @@
 
 <p class="text-[#fffbf5] bg-black/10  mt-1 p-2 rounded-sm  font-light w-[600px]">Experience Italy like never before! Book our expert chef to craft a personalized Italian meal just for you. From fresh pasta to wood-fired pizza, every dish is tailored to your taste. Don’t miss out—reserve now for a one-of-a-kind dining experience!</p>
 <div class="flex gap-4 items-center pt-4">
-            <a href="#" class=" text-base bg-[#FAF5EF] rounded-sm border-2 border-[#14452B]    text-[#14452B] px-4 py-2 hover:bg-[#14452B] hover:text-white transform duration-300">Reserve now !</a>
+            <a href="reserve.php" class=" text-base bg-[#FAF5EF] rounded-sm border-2 border-[#14452B]    text-[#14452B] px-4 py-2 hover:bg-[#14452B] hover:text-white transform duration-300">Reserve now !</a>
             </div>
 </div>
 </section>
@@ -96,19 +97,19 @@
  
     <div class="flex justify-center gap-16 flex-wrap">
       <div>
-        <img class="w-[350px] shadow-2xl   rounded-t-3xl" src="./img/carlo-cracco.jpg" alt="chef">
+        <img class="w-[350px] shadow-2xl   rounded-t-3xl" src="../img/carlo-cracco.jpg" alt="chef">
         <h1 class=" text-xl font-bold pt-2 pb-2 text-[#14452B] text-center">Revolutionizing Italian Cuisine</h1>
         <p class="w-[350px] text-[#14452B] text-center">He blends traditional Italian dishes with modern techniques, offering creative and contemporary twists on classic recipes.</p>
       </div>
 
       <div>
-        <img class="w-[350px] shadow-2xl rounded-t-3xl" src="./img/carlo-cracco.jpg.webp" alt="chef">
+        <img class="w-[350px] shadow-2xl rounded-t-3xl" src="../img/carlo-cracco.jpg.webp" alt="chef">
         <h1 class=" text-xl font-bold pt-2 pb-2 text-[#14452B] text-center">Michelin-Starred Culinary Expertise</h1>
         <p class="w-[350px] text-[#14452B] text-center">His restaurant "Cracco" in Milan has earned Michelin stars for its innovative and exceptional fine dining.</p>
       </div>
 
       <div>
-        <img class="w-[350px] shadow-2xl rounded-t-3xl" src="./img/images.jpg" alt="chef">
+        <img class="w-[350px] shadow-2xl rounded-t-3xl" src="../img/images.jpg" alt="chef">
         <h1 class=" text-xl font-bold pt-2 pb-2 text-[#14452B] text-center">TV Personality and Culinary Educator</h1>
         <p class="w-[350px] text-[#14452B] text-center">As a judge on MasterChef Italia, he mentors aspiring chefs and shares his culinary knowledge with a wider audience. </p>
       </div>
@@ -119,7 +120,7 @@
 
 <!-- menu section -->
 
-<section class="bg-[url('./img/bg-3.jpg')] bg-cover bg-center">
+<section class="bg-[url('../img/bg-3.jpg')] bg-cover bg-center">
 <div class="mt-8 pt-2 pb-4">
     <div class="mx-4 flex justify-center text-center  ">
       
@@ -188,8 +189,8 @@
 <footer class="bg-white ">
     <div class="w-full max-w-screen-xl  p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
-            <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                <img src="./img/DishUP.png" class="w-[150px]" alt="Flowbite Logo" />
+            <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <img src="../img/DishUP.png" class="w-[150px]" alt="Flowbite Logo" />
             </a>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                 <li>
