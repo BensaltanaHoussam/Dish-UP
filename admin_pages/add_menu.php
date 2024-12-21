@@ -17,7 +17,7 @@ if (isset ($_POST['submit'])){
   $query = mysqli_query($conn, "INSERT INTO menu (menu_name, menu_description, entree, main ,sortie) VALUES ('$menu_name', '$Menu_description', '$firstDish', '$secondDish' ,'$finalDish')");
 
   if($query) {
-    header("Location: index.php");
+    header("Location: index.php  ");
   }else{
     echo "<script>alert('There is an error');</script>";
   }
