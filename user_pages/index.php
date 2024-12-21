@@ -1,4 +1,9 @@
+<?php
+require('../db_connection.php');
 
+$query = "SELECT * FROM menu";
+$result = mysqli_query($conn, $query);
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -141,42 +146,28 @@
       
 
 
+    <?php 
+                        while ($row = mysqli_fetch_assoc($result)) {
+                        ?>
         <div class="bg-[#FAF5EF] shadow-2xl shadow-white/60  rounded-t-lg  p-4 flex border-[20px] border-white" >
 
         <div class="text-[#14452B] max-w-[300px] ">
-        <h1 class="text-2xl font-bold pb-2 ">Traditional Italian Trattoria Menu</h1>
-        <p class="text-light pb-4"><i class="ri-restaurant-2-line pr-1"></i> <span class="font-semibold">Entre : </span>Bruschetta al Pomodoro: Toasted bread with tomatoes, basil, and garlic | Prosciutto e Melone: Cured prosciutto with sweet melon.</p>
-        <p class="text-light pb-4"><i class="ri-bread-line pr-1"></i><span class="font-semibold">Main : </span>Lasagna alla Bolognese: Layers of pasta, meat sauce, and béchamel.|Risotto alla Milanese: Saffron-infused creamy risotto.</p>
-        <p class="text-light "><i class="ri-cake-3-fill pr-1"></i><span class="font-semibold">Dessert: : </span>Tiramisu: Espresso-soaked ladyfingers with mascarpone cream.|Panna Cotta: Silky vanilla custard with berries.</p>
+        <h1 class="text-2xl font-bold pb-2 "><?php echo $row['menu_name']; ?></h1>
+        <p class="text-light pb-4"><i class="ri-restaurant-2-line pr-1"></i> <span class="font-semibold">Entre : </span><?php echo $row['entree']; ?></p>
+        <p class="text-light pb-4"><i class="ri-bread-line pr-1"></i><span class="font-semibold">Main : </span><?php echo $row['main']; ?></p>
+        <p class="text-light "><i class="ri-cake-3-fill pr-1"></i><span class="font-semibold">Dessert: : </span><?php echo $row['sortie']; ?></p>
 
 
         </div>
         </div>
 
-         <div class="bg-[#FAF5EF] shadow-2xl shadow-white/60  rounded-t-lg  p-4 flex border-[20px] border-white" >
-
-        <div class="text-[#14452B] max-w-[300px]">
-        <h1 class="text-2xl font-bold pb-2 ">Coastal Italian Menu</h1>
-        <p class="text-light pb-4"><i class="ri-restaurant-2-line pr-1"></i><span class="font-semibold">Entre : </span>Insalata di Mare: Fresh seafood salad with lemon and herbs.|Fritto Misto di Mare: Crispy fried seafood with lemon.</p>
-        <p class="text-light pb-4"><i class="ri-bread-line pr-1"></i><span class="font-semibold">Main : </span>Spaghetti alle Vongole: Spaghetti with clams, garlic, and white wine.|Branzino al Forno: Roasted Mediterranean sea bass.</p>
-        <p class="text-light "><i class="ri-cake-3-fill pr-1"></i><span class="font-semibold">Dessert: : </span>Zabaglione: Creamy custard with Marsala wine.|Semifreddo al Limone: Lemon semifreddo.</p>
+        <?php
+                        }
+                        ?>
+  
 
 
-        </div>
-        </div>
-
-
-         <div class="bg-[#FAF5EF] shadow-2xl shadow-white/60 rounded-t-lg  p-4 flex border-[20px] border-white" >
-
-        <div class="text-[#14452B] max-w-[300px]">
-        <h1 class="text-2xl font-bold pb-2 ">Regional Italian Comfort Food Menu </h1>
-        <p class="text-light pb-4"><i class="ri-restaurant-2-line pr-1"></i> <span class="font-semibold">Entre : </span>Supplì al Telefono: Fried rice balls with mozzarella.|Panzanella: Tuscan bread salad with tomatoes and cucumbers.</p>
-        <p class="text-light pb-4"><i class="ri-bread-line pr-1"></i><span class="font-semibold">Main : </span>Ossobuco alla Milanese: Braised veal with risotto alla Milanese.|Fettucine Alfredo: Creamy fettucine with Parmesan sauce.</p>
-        <p class="text-light"><i class="ri-cake-3-fill pr-1"></i><span class="font-semibold">Dessert: : </span>Cassata Siciliana: Sicilian ricotta cake with marzipan.|Ricotta Cheesecake: Creamy cheesecake with fruit compote.</p>
-
-
-        </div>
-        </div>
+      
       
 
 </section>

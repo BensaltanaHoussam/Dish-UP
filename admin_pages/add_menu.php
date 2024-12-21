@@ -14,7 +14,7 @@ if (isset ($_POST['submit'])){
   $finalDish = $_POST['finalDish'];
  
 
-  $query = mysqli_query($conn, "INSERT INTO menu (menu_name, menu_description, entree, main ,sortie) VALUES ('$menu_name', '$Menu_description', '$firstDish', '$secondDish' ,'$finalDish')");
+  $query = mysqli_query($conn, "INSERT INTO menu (menu_name, menu_description,id_reserve_fk, entree, main ,sortie) VALUES ('$menu_name', '$Menu_description','$id_reserve_fk', '$firstDish', '$secondDish' ,'$finalDish')");
 
   if($query) {
     header("Location: index.php  ");

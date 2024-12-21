@@ -1,8 +1,11 @@
 <?php
 require('../db_connection.php');
 
-$query = "SELECT * FROM users";
-$result = mysqli_query($conn, $query);
+$queryUsers = "SELECT * FROM users";
+$resultUsers = mysqli_query($conn, $queryUsers);
+
+$queryMenu = "SELECT * FROM menu";
+$resultMenu = mysqli_query($conn, $queryMenu);
 ?>
 
 <!DOCTYPE html>
@@ -54,10 +57,10 @@ $result = mysqli_query($conn, $query);
                   <img src='img/3 User.svg' alt=''> Clients 
                 </a>
                 <a href="javascript:void(0);" class="flex gap-4 px-4 py-2 rounded-2xl" onclick="toggleContent('reservations')">
-                  <img id='btn-icon' class='mt-1' src='img/act.svg' alt=''> Reservations
+                  <img id='btn-icon' class='mt-1' src='img/act.svg' alt=''> Menus
                 </a>
                 <a href="javascript:void(0);" class="flex gap-4 px-4 py-2 rounded-2xl" onclick="toggleContent('Menus')">
-                  <img src="img/Settings_Future.svg" alt=""> Menus
+                  <img src="img/Settings_Future.svg" alt=""> Reservations
                 </a>
             </div>
         </div>
@@ -104,7 +107,7 @@ $result = mysqli_query($conn, $query);
                     </thead>
                     <tbody>
                         <?php 
-                        while ($row = mysqli_fetch_assoc($result)) {
+                        while ($row = mysqli_fetch_assoc($resultUsers)) {
                         ?>
                             <tr>
                                 <td class="border border-gray-300 px-4 py-2"><?php echo $row['id']; ?></td>
@@ -128,10 +131,42 @@ $result = mysqli_query($conn, $query);
 
             <!-- Reservations Section (Hidden by Default) -->
             <div id="reservation-section" style="display: none;">
-            <h1 class="text-2xl font-bold mb-6">Reservations</h1> 
+            <h1 class="text-2xl font-bold mb-6">Menus</h1> 
+            <table class="min-w-full table-auto border-collapse border border-gray-200 ">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="border bg-slate-400  border-gray-300 px-4 py-2">Menu name</th>
+                            <th class="border bg-gray-400 border-gray-300 px-4 py-2">Menu description</th>
+                            <th class="border bg-gray-400 border-gray-300 px-4 py-2">entre</th>
+                            <th class="border bg-gray-400 border-gray-300 px-4 py-2">main</th>
+                            <th class="border bg-gray-400 border-gray-300 px-4 py-2">Dessert</th>
+                            <th class="border bg-gray-400 border-gray-300 px-4 py-2">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php 
+                        while ($row = mysqli_fetch_assoc($resultMenu)) {
+                        ?>
+                            <tr>
+                                <td class="border border-gray-300 px-4 py-2"><?php echo $row['menu_name']; ?></td>
+                                <td class="border bg-slate-100 font-medium border-gray-300 px-4 py-2"><?php echo $row['menu_description']; ?></td>
+                                <td class="border bg-slate-100 font-medium border-gray-300 px-4 py-2"><?php echo $row['entree']; ?></td>
+                                <td class="border bg-slate-100 font-medium border-gray-300 px-4 py-2"><?php echo $row['main']; ?></td>
+                                <td class="border bg-slate-100 font-medium border-gray-300 px-4 py-2"><?php echo $row['sortie']; ?></td>
+                                <td class="border bg-slate-100 border-gray-300 px-4 py-2">
+                                    <a href="modify.php?id=<?php echo $row['id_menu']; ?>" class="text-blue-500 hover:underline">Modify</a>
+                                    |
+                                    <a href="delete.php?id=<?php echo $row['id_menu']; ?>" class="text-red-500 hover:underline" onclick="return confirm('Are you sure you want to delete this user?');">Delete</a>
+                                </td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
+                    </tbody>
+                </table>
             </div>
 
-            
+
 
             <!-- Menus Section (Hidden by Default) -->
             <div id="menus-section" style="display: none;">
