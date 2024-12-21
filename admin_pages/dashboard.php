@@ -85,10 +85,11 @@ $result = mysqli_query($conn, $query);
 
     
         <main class="p-8 bg-[url('../img/background_dash.jpg')] bg-cover bg-center h-[500px] ">
-            <h1 class="text-2xl font-bold mb-6">Clients</h1>
+            
 
             <!-- Clients Section -->
             <div id="client-section">
+            <h1 class="text-2xl font-bold mb-6">Clients</h1>
                 <table class="min-w-full table-auto border-collapse border border-gray-200 ">
                     <thead>
                         <tr class="bg-gray-100">
@@ -127,11 +128,10 @@ $result = mysqli_query($conn, $query);
 
             <!-- Reservations Section (Hidden by Default) -->
             <div id="reservation-section" style="display: none;">
-                <!-- Add reservation content here -->
-                <h2 class="text-xl font-bold">Reservations Content</h2>
-                <!-- Example reservation table or content can go here -->
-                <p>This is where the reservation details will be displayed.</p>
+            <h1 class="text-2xl font-bold mb-6">Reservations</h1> 
             </div>
+
+            
 
             <!-- Menus Section (Hidden by Default) -->
             <div id="menus-section" style="display: none;">

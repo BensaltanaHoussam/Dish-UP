@@ -1,22 +1,23 @@
 <?php  
 
-require('./db_connection.php');
+require('../db_connection.php');
 
 if (isset ($_GET['id_menu'])){$id = $_GET['id_menu'];};
 
 
 if (isset ($_POST['submit'])){
 
-  $city_name = $_POST['city_name'];
-  $city_description = $_POST['city_description'];
-  $Type = $_POST['Type'];
-  $city_img = $_POST['city_img'];
+  $menu_name = $_POST['menu_name'];
+  $Menu_description = $_POST['Menu_description'];
+  $firstDish = $_POST['firstDish'];
+  $secondDish = $_POST['secondDish'];
+  $finalDish = $_POST['finalDish'];
  
 
-  $query = mysqli_query($conn, "INSERT INTO menu (city_name, city_description, Type, city_img ,id_pays) VALUES ('$city_name', '$city_description', '$Type', '$city_img' ,'$id')");
+  $query = mysqli_query($conn, "INSERT INTO menu (menu_name, menu_description, entree, main ,sortie) VALUES ('$menu_name', '$Menu_description', '$firstDish', '$secondDish' ,'$finalDish')");
 
   if($query) {
-    header("Location: cities.php?id_pays={$id}");
+    header("Location: index.php");
   }else{
     echo "<script>alert('There is an error');</script>";
   }
@@ -84,24 +85,54 @@ if (isset ($_POST['submit'])){
 
 
 
-  <section class="pb-20">
-    <form class="flex flex-col gap-4  mx-auto w-full md:w-1/2 bg-gray-50 p-8  rounded shadow" method="POST">
-      <label for="city-name" class="font-semibold">Menu Name:</label>
-      <input type="text" name="city_name" id="city_name" class="p-2 border border-green-900 rounded" placeholder="Enter country name">
+  <section class="pb-20 bg-[url('../img/hero_bg2.jpg')] bg-cover bg-center h-auto  p-8">
+    <form class="flex flex-col gap-4  mx-auto w-full md:w-1/2 bg-[#FAF5EF] p-8  rounded shadow-xl shadow-white/40" method="POST">
+      <label for="menu-name" class="font-semibold">Menu Name:</label>
+      <input type="text" name="menu_name" id="menu_name" class="p-2 border border-green-900 rounded" placeholder="Enter menu name">
 
-      <label for="city-description" class="font-semibold">Menu Description:</label>
-      <textarea type="text" rows="4" name="city_description" id="city_description" class="p-2 border border-green-900 rounded " placeholder="Enter country location"></textarea>
+      <label for="Menu-description" class="font-semibold">Menu Description:</label>
+      <textarea type="text" rows="4" name="Menu_description" id="Menu_description" class="p-2 border border-green-900 rounded " placeholder="Enter menu description "></textarea>
 
-      <label for="Type" class="font-semibold">Type(Capital or City) :</label>
-      <input type="text" name="Type" id="Type" class="p-2 border border-green-900 rounded" placeholder="Enter city type">
+      <label for="Start-Dish" class="font-semibold">Start Dish description:</label>
+      <textarea type="text" rows="3" name="firstDish" id="firstDish" class="p-2 border border-green-900 rounded" placeholder="Enter first dish"></textarea>
 
-      <label for="city-img" class="font-semibold">City Image URL:</label>
-      <input type="text" name="city_img" id="city-img" class="p-2 border border-green-900 rounded" placeholder="Enter image URL">
+      <label for="Second-Dish" class="font-semibold">Second Dish description:</label>
+      <textarea type="text" rows="3" name="secondDish" id="secondDish" class="p-2 border border-green-900 rounded" placeholder="Enter second dish"></textarea>
 
-      <button href="index.php?" type="submit" name="submit" class="mt-4 bg-green-950 text-white py-2 px-4 rounded hover:bg-green-700 transform duration-300">Add Country</button>
+      <label for="Final-Dish" class="font-semibold">Final Dish description:</label>
+      <textarea type="text" rows="3" name="finalDish" id="finalDish" class="p-2 border border-green-900 rounded" placeholder="Enter final dish"></textarea>
+
+      <button href="index.php?" type="submit" name="submit" class="mt-4 bg-green-950 text-white py-2 px-4 rounded hover:bg-green-700 transform duration-300">Add Menu</button>
     </form>
-
     </section>
+
+
+
+    <footer class="bg-white ">
+    <div class="w-full max-w-screen-xl  p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <img src="../img/DishUP.png" class="w-[150px]" alt="Flowbite Logo" />
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+    </div>
+</footer>
 
 
 
