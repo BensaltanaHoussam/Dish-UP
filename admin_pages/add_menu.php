@@ -19,7 +19,7 @@ if (isset ($_POST['submit'])){
   if($query) {
     header("Location: index.php  ");
   }else{
-    echo "<script>alert('There is an error');</script>";
+    echo "<script>alert('There is an error ');</script>";
   }
 
 }
